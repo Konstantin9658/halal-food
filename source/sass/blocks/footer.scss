@@ -1,0 +1,163 @@
+.footer {
+  flex: 0 0 auto;
+  min-height: 184px;
+  background-color: $footer-green;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    min-height: 258px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 180px;
+  }
+}
+
+.footer__wrapper {
+  width: 642px;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 22px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    max-width: 750px;
+    padding: 0 17px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-flow: column wrap;
+    padding: 0 29px;
+  }
+}
+
+.footer__contact {
+  display: flex;
+  flex-flow: column wrap;
+  margin-right: 21px;
+  width: 232px;
+
+  @media (max-width: $tablet-width) {
+    width: 326px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 17px;
+    margin-left: 5px;
+  }
+}
+
+.footer__contact-link {
+  @include font($montserrat, 16px, 20px, 800, normal);
+  color: $soft-yellow;
+  margin-bottom: 12px;
+
+  @media (max-width: $mobile-width) {
+    @include resize-txt(12px, 15px);
+  }
+
+  &:hover,
+  &:focus-visible {
+    transition: $trans--300;
+    color: $strong-orange;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.footer__social-list {
+  @include reset-list;
+  display: flex;
+  flex-grow: 1;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 5px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 5px;
+  }
+}
+
+.footer__social-item {
+  margin-right: 48px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-right: 35.5px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    display: flex;
+
+    &:hover,
+    &:focus-visible {
+
+      svg {
+        transition: $trans--300;
+        transform: scale(1.1);
+      }
+
+      p {
+        text-decoration: underline;
+      }
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  p {
+    @include font($montserrat, 16px, 20px, 700, normal);
+    color: $soft-yellow;
+    margin: 0;
+    width: 128px;
+    padding-left: 16px;
+    padding-top: 13px;
+
+    @media (max-width: $mobile-width) {
+      width: 117px;
+      @include resize-txt(12px, 15px);
+      padding-top: 3px;
+      padding-left: 11px;
+    }
+  }
+
+  &--inst,
+  &--vk {
+
+    @media (max-width: $mobile-width) {
+
+      svg {
+        width: 39px;
+        height: 38px;
+      }
+    }
+  }
+
+  &--marker {
+
+    @media (max-width: $mobile-width) {
+
+      svg {
+        width: 28px;
+        height: 37px;
+      }
+    }
+  }
+}

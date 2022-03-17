@@ -1,0 +1,147 @@
+.feedback {
+  min-height: 613px;
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    min-height: 542px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 437px;
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    z-index: -1;
+  }
+
+  &::after {
+    content: url("../img/feedback/pepper-1.png");
+    bottom: 217px;
+    left: 250px;
+
+    @media (max-width: $tablet-width) {
+      bottom: 202px;
+      left: 129px;
+    }
+
+    @media (max-width: $mobile-width) {
+      content: url("../img/feedback/pepper-1-mobile.png");
+      left: calc((100% - 360px) / 2);
+      bottom: 150px;
+    }
+  }
+
+  &::before {
+    content: url("../img/feedback/pepper-2.png");
+    right: 251px;
+    top: 61px;
+
+    @media (max-width: $tablet-width) {
+      right: 76px;
+      top: 38px;
+    }
+
+    @media (max-width: $mobile-width) {
+      content: url("../img/feedback/pepper-2-mobile.png");
+      left: calc((100% + 157px) / 2);
+      top: 44px;
+    }
+  }
+}
+
+.feedback__list {
+  @include reset-list;
+  display: flex;
+}
+
+.feedback__wrapper {
+  width: 762px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 200px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 170px;
+    width: 540px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 235px;
+    margin-top: 93px;
+  }
+
+  h2 {
+    @include font($montserrat, 40px, 49px, 900, normal);
+    color: $color-txt;
+    margin: 0 auto;
+    width: 308px;
+    padding-bottom: 60px;
+    letter-spacing: 0.5px;
+    text-align: center;
+
+    @media (max-width: $tablet-width) {
+      @include resize-txt(36px, 44px);
+      width: 277px;
+      padding-bottom: 41.5px;
+    }
+
+    @media (max-width: $mobile-width) {
+      @include resize-txt(27px, 33px);
+      width: 100%;
+      padding-bottom: 35px;
+    }
+  }
+}
+
+.feedback__item {
+  min-width: 234px;
+  min-height: 176px;
+  border-radius: $feedback-radius;
+  background-color: $soft-yellow;
+  margin-right: 30px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 15px 14px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 72px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+  }
+
+  blockquote {
+    margin: 0;
+  }
+
+  p,
+  a {
+    @include font($montserrat, 11px, 13px, 400, normal);
+    color: $lime-green;
+    margin: 0;
+  }
+
+  a {
+    @include resize-txt(16px, 20px);
+    border-bottom: 1px solid $lime-green;
+  }
+}
+
+.feedback__user {
+  background-color: $lime-green;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}

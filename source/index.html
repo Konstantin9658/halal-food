@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Восточныя кухня">
+  <meta property="og:title" content="Halal Food">
+  <link rel="prefetch" href="fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="prefetch" href="fonts/montserrat-extrabold.woff2" as="font" crossorigin="anonymous">
+  <link rel="prefetch" href="fonts/montserrat-medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="prefetch" href="fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="prefetch" href="fonts/montserrat-semibold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Halal Food</title>
+</head>
+
+<body class="page__body page__body--index">
+  <header class="header header--index">
+    <div class="header__wrapper container">
+      <a href="#">
+        <img loading="lazy" class="header__logo" src="img/logo.png" width="74" height="62" alt="Логотип компании">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="#">Меню</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#">Интерьер</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#">Отзывы</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#contacts">Контакты</a>
+          </li>
+        </ul>
+        <div class="header__nav-contact">
+          <a class="header__nav-link" href="#">г. Самара  ул. Садовая 61</a>
+          <a class="header__nav-link" href="tel:+79277358265">8-9277358265</a>
+        </div>
+        <button class="button button--burger"><span></span></button>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <section class="intro container">
+      <div class="intro__wrapper">
+        <h1 class="intro__text-gradient">Вкусная кухня <br>и уютная атмосфера востока</h1>
+        <p>Вкуснейший шашлык и плов, лагман, манты и самса, горячий чай с восточными сладостями и другие блюда восточной кухни.</p>
+        <a class="button button--green">Посмотреть меню</a>
+      </div>
+    </section>
+    <section class="about container">
+      <div class="about__wrapper">
+        <h2>О нас</h2>
+        <p>
+          Halal Food – это кафе с дружелюбным персоналом, высококлассным сервисом, уютным и тёплым интерьером,
+          а также незабываемой вкусной кухней. В нашем меню вы найдете традиционные рецепты, а также блюда и напитки,
+          которые смогут окунуть вас в мир восточной кухни. Многие блюда имеют свои традиции, уходящие корнями в древность.
+          Они связаны в значительной степени с сакральным отношением к еде и продуктам как к одушевлённым существам, к которым
+          необходимо относиться с должным уважением. Приходите, заказывайте с собой, заказывайте доставку - мы всегда рады вкусно
+          и сытно накормить наших уважаемых Гостей.
+        </p>
+        <ul class="about__list">
+          <li class="about__item about__item--tray">
+            <svg width="88" height="55" role="img">
+              <use xlink:href="img/sprite.svg#icon-tray"></use>
+            </svg>
+            <p>Вкусные блюда</p>
+          </li>
+          <li class="about__item about__item--vase">
+            <svg width="94" height="130" role="img">
+              <use xlink:href="img/sprite.svg#icon-vase"></use>
+            </svg>
+            <p>Уютная атмосфера востока</p>
+          </li>
+          <li class="about__item about__item--medal">
+            <svg width="70" height="70" role="img">
+              <use xlink:href="img/sprite.svg#icon-medal"></use>
+            </svg>
+            <p>Качественные продукты</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="menu container">
+      <div class="menu__wrapper">
+        <div class="menu__text">
+          <h2>Наше меню</h2>
+          <p>Восточная кухня очень разнообразна и поражает обилием мясных, овощных и сладких блюд. Каждая трапеза – это настоящий ритуал!</p>
+        </div>
+        <button class="button button--menu-slider button--menu-slider-prev swiper-button-prev-2" type="button">
+          <span class="visually-hidden">Предыдущий слайд</span>
+        </button>
+        <button class="button button--menu-slider button--menu-slider-next swiper-button-next-2" type="button">
+          <span class="visually-hidden">Следующий слайд</span>
+        </button>
+        <div class="menu__inner swiper-2">
+          <ul class="menu__list swiper-wrapper">
+            <!-- 1 -->
+            <li class="menu__item swiper-slide">
+              <a href="first-menu.html">
+                <picture>
+                  <source type="image/webp" srcset="img/menu/first-menu.webp 1x, img/menu/first-menu@2x.webp 2x">
+                  <img loading="lazy" width="290" height="199" src="img/menu/first-menu.png" srcset="img/menu/first-menu@2x.png 2x" alt="">
+                </picture>
+                <p>ПЕРВЫЕ БЛЮДА</p>
+              </a>
+            </li>
+            <!-- 2 -->
+            <li class="menu__item swiper-slide">
+              <a href="second-menu.html">
+                <picture>
+                  <source type="image/webp" srcset="img/menu/second-menu.webp 1x, img/menu/second-menu@2x.webp 2x">
+                  <img loading="lazy" width="290" height="199" src="img/menu/second-menu.png" srcset="img/menu/second-menu@2x.png 2x" alt="">
+                </picture>
+                <p>ВТОРЫЕ БЛЮДА</p>
+              </a>
+            </li>
+            <!-- 3 -->
+            <li class="menu__item swiper-slide">
+              <a href="grill-menu.html">
+                <picture>
+                  <source type="image/webp" srcset="img/menu/grill-menu.webp 1x, img/menu/grill-menu@2x.webp 2x">
+                  <img loading="lazy" width="290" height="199" src="img/menu/grill-menu.png" srcset="img/menu/grill-menu@2x.png 2x" alt="">
+                </picture>
+                <p>БЛЮДА НА МАНГАЛЕ</p>
+              </a>
+            </li>
+            <!-- 4 -->
+            <li class="menu__item swiper-slide">
+              <a href="salads-menu.html">
+                <picture>
+                  <source type="image/webp" srcset="img/menu/salads-menu.webp 1x, img/menu/salads-menu@2x.webp 2x">
+                  <img loading="lazy" width="290" height="199" src="img/menu/salads-menu.png" srcset="img/menu/salads-menu@2x.png 2x" alt="">
+                </picture>
+                <p>САЛАТЫ</p>
+              </a>
+            </li>
+            <!-- 5 -->
+            <li class="menu__item swiper-slide">
+              <a href="bakery-menu.html">
+                <picture>
+                  <source type="image/webp" srcset="img/menu/bakery-menu.webp 1x, img/menu/bakery-menu@2x.webp 2x">
+                  <img loading="lazy" width="290" height="199" src="img/menu/bakery-menu.png" srcset="img/menu/bakery-menu@2x.png 2x" alt="">
+                </picture>
+                <p>ВЫПЕЧКА</p>
+              </a>
+            </li>
+            <!-- 6 -->
+            <li class="menu__item swiper-slide">
+              <a href="drinks-menu.html">
+                <picture>
+                  <source type="image/webp" srcset="img/menu/drinks-menu.webp 1x, img/menu/drinks-menu@2x.webp 2x">
+                  <img loading="lazy" width="290" height="199" src="img/menu/drinks-menu.png" srcset="img/menu/drinks-menu@2x.png 2x" alt="">
+                </picture>
+                <p>НАПИТКИ</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="interior">
+      <div class="container">
+        <div class="interior__wrapper">
+          <h2>Окунись в восточную сказку</h2>
+          <div class="interior__box">
+            <div class="interior__img">
+              <picture>
+                <source type="image/webp" srcset="img/interior/interior-photo-1.webp 1x, img/interior/interior-photo-1@2x.webp 2x">
+                <img loading="lazy" width="447" height="300" src="img/interior/interior-photo-1.jpg" srcset="img/interior/interior-photo-1@2x.jpg 2x" alt="">
+              </picture>
+              <picture>
+                <source type="image/webp" srcset="img/interior/interior-photo-2.webp 1x, img/interior/interior-photo-2@2x.webp 2x">
+                <img loading="lazy" width="205" height="300" src="img/interior/interior-photo-2.jpg" srcset="img/interior/interior-photo-2@2x.jpg 2x" alt="">
+              </picture>
+            </div>
+            <div class="interior__desc">
+              <p>
+                Концепция кафе заключается в создании атмосферы Востока. Архитектура и декоративные элементы кафе, обладают
+                уютной и располагающей к отдыху обстановкой. Отдохнуть можно как в большой компании на мягких красных диванчиках
+                в первом зале, так и провести время с близким человеком, разместившись за столиками во втором зале. У нас также
+                есть две VIP-комнаты, где можно отметить важное событие в жизни или провести романтический вечер.
+              </p>
+              <a href="interior.html" class="button button--orange" type="button">Посмотреть интерьер</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feedback container">
+      <button class="button button--slider button--slider-prev swiper-button-prev" type="button">
+        <span class="visually-hidden">Предыдущий слайд</span>
+      </button>
+      <button class="button button--slider button--slider-next swiper-button-next" type="button">
+        <span class="visually-hidden">Следующий слайд</span>
+      </button>
+      <div class="feedback__wrapper swiper">
+        <h2>Ваши отзывы</h2>
+        <ul class="feedback__list swiper-wrapper">
+          <li class="feedback__item swiper-slide">
+            <div class="feedback__user">
+              <img loading="lazy" src="img/feedback/user-1.jpg" width="64" height="64" alt="">
+            </div>
+            <blockquote cite="https://2gis.ru/samara/firm/70000001057662342/tab/reviews?m=50.104775%2C53.184138%2F17.4">
+              <p>Уютное и атмосферное место. Еда вкусная, персонал вежливый. Всем советую! Приятного аппетита)</p>
+            </blockquote>
+            <svg width="70" height="14" role="img">
+              <use xlink:href="img/sprite.svg#icon-stars"></use>
+            </svg>
+          </li>
+          <li class="feedback__item swiper-slide">
+            <div class="feedback__user">
+              <img loading="lazy" src="img/feedback/user-2.jpg" width="64" height="64" alt="">
+            </div>
+            <blockquote cite="https://2gis.ru/samara/firm/70000001057662342/tab/reviews?m=50.104775%2C53.184138%2F17.4">
+              <p>Очень вкусная еда! Чистый, красивый и колоритный зал. Приветливые официанты. Отдельно хочу отметить сладости</p>
+            </blockquote>
+            <svg width="70" height="14" role="img">
+              <use xlink:href="img/sprite.svg#icon-stars"></use>
+            </svg>
+          </li>
+          <li class="feedback__item swiper-slide">
+            <div class="feedback__user">
+              <img loading="lazy" src="img/feedback/user-3.jpg" width="64" height="64" alt="">
+            </div>
+            <blockquote cite="https://2gis.ru/samara/firm/70000001057662342/tab/reviews?m=50.104775%2C53.184138%2F17.4">
+              <p>Частенько сюда захожу, все безумно вкусно, внутри и снаружи все очень красиво и чисто! Сотрудники очень вежливые.</p>
+            </blockquote>
+            <svg width="70" height="14" role="img">
+              <use xlink:href="img/sprite.svg#icon-stars"></use>
+            </svg>
+          </li>
+          <li class="feedback__item swiper-slide">
+            <div class="feedback__user">
+              <img loading="lazy" src="img/feedback/user-4.jpg" width="64" height="64" alt="">
+            </div>
+            <blockquote cite="https://2gis.ru/samara/firm/70000001057662342/tab/reviews?m=50.104775%2C53.184138%2F17.4">
+              <p>Заезжал в этот ресторан по пути перекусить, в итоге поел сытно и вкусно, вернусь сюда ещё и не раз!</p>
+            </blockquote>
+            <svg width="70" height="14" role="img">
+              <use xlink:href="img/sprite.svg#icon-stars"></use>
+            </svg>
+          </li>
+          <li class="feedback__item swiper-slide">
+            <div class="feedback__user">
+              <img loading="lazy" src="img/feedback/user-5.jpg" width="64" height="64" alt="">
+            </div>
+            <blockquote cite="https://2gis.ru/samara/firm/70000001057662342/tab/reviews?m=50.104775%2C53.184138%2F17.4">
+              <p>Самая вкусная самса в моей жизни ! А еще очень дружелюбный персонал)) К Вам приятно приходить в гости, спасибо!))</p>
+            </blockquote>
+            <svg width="70" height="14" role="img">
+              <use xlink:href="img/sprite.svg#icon-stars"></use>
+            </svg>
+          </li>
+          <li class="feedback__item swiper-slide">
+            <div class="feedback__user">
+              <img loading="lazy" src="img/feedback/user-6.jpg" width="64" height="64" alt="">
+            </div>
+            <blockquote cite="https://2gis.ru/samara/firm/70000001057662342/tab/reviews?m=50.104775%2C53.184138%2F17.4">
+              <p>Это место просто находка. Почти все попробовал, все вкусно, особенно лагман! Теперь постоянный ваш клиент 😊</p>
+            </blockquote>
+            <svg width="70" height="14" role="img">
+              <use xlink:href="img/sprite.svg#icon-stars"></use>
+            </svg>
+          </li>
+          <li class="feedback__item swiper-slide">
+            <div class="feedback__user">
+            </div>
+            <blockquote>
+              <a href="https://go.2gis.com/6ydax">Читать все отзывы</a>
+            </blockquote>
+            <svg width="70" height="14" role="img">
+              <use xlink:href="img/sprite.svg#icon-stars"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <a href="#" class="button button--up" id="goTop">наверх</a>
+  </main>
+  <footer class="footer" id="contacts">
+    <h2 class="visually-hidden">Как нас найти?</h2>
+    <div class="footer__wrapper">
+      <div class="footer__contact">
+        <a class="footer__contact-link" href="tel:+79277358265">8-9277358265</a>
+        <a class="footer__contact-link" href="#">г. Самара  ул. Садовая 61</a>
+      </div>
+      <ul class="footer__social-list">
+        <!-- <li class="footer__social-item footer__social-item--inst">
+          <a href="#">
+            <svg width="54" height="54" role="img">
+              <use xlink:href="img/sprite.svg#icon-inst"></use>
+            </svg>
+          </a>
+        </li> -->
+        <li class="footer__social-item footer__social-item--vk">
+          <a href="https://vk.com/halal_food63">
+            <svg width="54" height="54" role="img">
+              <use xlink:href="img/sprite.svg#icon-vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item footer__social-item--marker" id="showMap">
+          <a href="#">
+            <svg width="40" height="58" role="img">
+              <use xlink:href="img/sprite.svg#icon-marker"></use>
+            </svg>
+            <p>Посмотреть на карте</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <div class="overlay overlay--hidden"></div>
+  <section class="map modal conatiner" id="modal-map">
+    <div class="map__container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2390.833308866343!2d50.10069331570318!3d53.1849699799456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41661f54eef22b2d%3A0xb16af47ad584abd!2sHALAL%20FOOD!5e0!3m2!1sru!2sru!4v1647334873613!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <button class="button button--close" id="closeMap" type="button" aria-label="Закрыть карту">
+      <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z" fill="#fff" />
+      </svg>
+    </button>
+  </section>
+  <script type="module" src="js/vendor.js"></script>
+  <script type="module" src="js/swiper.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
