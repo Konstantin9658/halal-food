@@ -8,58 +8,52 @@
   flex-direction: column;
   height: auto;
   width: 100vw;
-  background-color: $lime-green;
-  -webkit-blend-mode: multiply;
-  background-blend-mode: multiply;
-  background-image:  url("../img/body-bcg.jpg");
+  background: linear-gradient(90deg, rgba(10, 20, 0, 0.9)), url("../img/body-bcg.jpg");
   background-position: 50% 50%;
 
-  &--index {
+  &::after,
+  &::before {
+    position: absolute;
+    z-index: -1;
+  }
 
-    &::after,
-    &::before {
-      position: absolute;
-      z-index: -1;
+  &::after {
+    content: url("../img/pepper-footer.png");
+    bottom: 38px;
+    left: calc((100% - 1207px) / 2);
+
+    @media (max-width: $tablet-width) {
+      content: url("../img/pepper-footer-tab.png");
+      left: calc((100% - 744px) / 2);
+      bottom: 132px;
     }
 
-    &::after {
-      content: url("../img/pepper-footer.png");
-      bottom: 38px;
-      left: calc((100% - 1207px) / 2);
+    @media (max-width: $mobile-width) {
+      content: url("../img/pepper-footer-mobile.png");
+      left: calc((100% - 427px)/2);
+      bottom: 89px;
+    }
+  }
 
-      @media (max-width: $tablet-width) {
-        content: url("../img/pepper-footer-tab.png");
-        left: calc((100% - 744px) / 2);
-        bottom: 132px;
-      }
+  &::before {
+    content: url("../img/plate-footer.png");
+    bottom: 18px;
+    right: 8px;
 
-      @media (max-width: $mobile-width) {
-        content: url("../img/pepper-footer-mobile.png");
-        left: calc((100% - 427px)/2);
-        bottom: 89px;
-      }
+    @media (min-width: 1440px) {
+      right: calc((100% - 1424px) / 2);
     }
 
-    &::before {
-      content: url("../img/plate-footer.png");
-      bottom: 18px;
-      right: 8px;
+    @media (max-width: $tablet-width) {
+      content: url("../img/plate-footer-tab.png");
+      right: 9px;
+      bottom: 142px;
+    }
 
-      @media (min-width: 1440px) {
-        right: calc((100% - 1424px) / 2);
-      }
-
-      @media (max-width: $tablet-width) {
-        content: url("../img/plate-footer-tab.png");
-        right: 9px;
-        bottom: 142px;
-      }
-
-      @media (max-width: $mobile-width) {
-        content: url("../img/plate-footer-mobile.png");
-        right: 0px;
-        bottom: 122px;
-      }
+    @media (max-width: $mobile-width) {
+      content: url("../img/plate-footer-mobile.png");
+      right: 0px;
+      bottom: 122px;
     }
   }
 }

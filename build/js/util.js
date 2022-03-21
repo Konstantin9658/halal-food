@@ -1,6 +1,9 @@
 const body = document.querySelector('.page__body');
 const main = body.querySelector('main');
 const overlay = body.querySelector('.overlay');
+const menuBox = main.querySelector('.menu__inner');
+const btnsNoJs = body.querySelectorAll('.button--nojs');
+const feedbackBox = main.querySelector('.feedback__wrapper');
 
 const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
@@ -20,5 +23,8 @@ export {
   setOverlayHide,
   setOverlayVisible,
   isEscEvent,
-  overlay
+  overlay,
+  menuBox,
+  btnsNoJs,
+  feedbackBox
 }

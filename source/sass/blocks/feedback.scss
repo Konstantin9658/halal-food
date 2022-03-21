@@ -65,6 +65,20 @@
   @media (max-width: $tablet-width) {
     margin-top: 170px;
     width: 540px;
+
+    &--nojs {
+
+      .feedback__list {
+        overflow: auto;
+      }
+
+      .feedback__item {
+
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+    }
   }
 
   @media (max-width: $mobile-width) {
@@ -111,7 +125,7 @@
     margin-right: 72px;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     margin-right: 0;
   }
 

@@ -19,7 +19,7 @@
 <body class="page__body page__body--index">
   <header class="header header--index">
     <div class="header__wrapper container">
-      <a href="#">
+      <a>
         <img loading="lazy" class="header__logo" src="img/logo.png" width="74" height="62" alt="Логотип компании">
       </a>
       <nav class="header__nav">
@@ -28,26 +28,26 @@
             <a href="interior.html">Интерьер</a>
           </li>
           <li class="header__nav-item">
-            <a href="#">Отзывы</a>
+            <a href="#feedback">Отзывы</a>
           </li>
           <li class="header__nav-item">
             <a href="#contacts">Контакты</a>
           </li>
         </ul>
         <div class="header__nav-contact">
-          <a class="header__nav-link" href="#">г. Самара  ул. Садовая 61</a>
+          <a class="header__nav-link" href="https://yandex.ru/maps/-/CCUBq2cagC">г. Самара  ул. Садовая 61</a>
           <a class="header__nav-link" href="tel:+79277358265">8-9277358265</a>
         </div>
-        <button class="button button--burger" id="btnMenu"><span></span></button>
+        <button class="button button--burger button--nojs" id="btnMenu"><span></span></button>
       </nav>
     </div>
   </header>
-  <main class="main">
+  <main class="main main--index">
     <section class="intro container">
       <div class="intro__wrapper">
         <h1 class="intro__text-gradient">Вкусная кухня <br>и уютная атмосфера востока</h1>
         <p>Вкуснейший шашлык и плов, лагман, манты и самса, горячий чай с восточными сладостями и другие блюда восточной кухни.</p>
-        <a class="button button--green">Посмотреть меню</a>
+        <a href="#menu" class="button button--green">Посмотреть меню</a>
       </div>
     </section>
     <section class="about container">
@@ -83,19 +83,19 @@
         </ul>
       </div>
     </section>
-    <section class="menu container">
+    <section class="menu container" id="menu">
       <div class="menu__wrapper">
         <div class="menu__text">
           <h2>Наше меню</h2>
           <p>Восточная кухня очень разнообразна и поражает обилием мясных, овощных и сладких блюд. Каждая трапеза – это настоящий ритуал!</p>
         </div>
-        <button class="button button--menu-slider button--menu-slider-prev swiper-button-prev-2" type="button">
+        <button class="button button--nojs button--menu-slider button--menu-slider-prev swiper-button-prev-2" type="button">
           <span class="visually-hidden">Предыдущий слайд</span>
         </button>
-        <button class="button button--menu-slider button--menu-slider-next swiper-button-next-2" type="button">
+        <button class="button button--nojs button--menu-slider button--menu-slider-next swiper-button-next-2" type="button">
           <span class="visually-hidden">Следующий слайд</span>
         </button>
-        <div class="menu__inner swiper-2">
+        <div class="menu__inner menu__inner--nojs swiper-2">
           <ul class="menu__list swiper-wrapper">
             <!-- 1 -->
             <li class="menu__item swiper-slide">
@@ -183,20 +183,20 @@
                 в первом зале, так и провести время с близким человеком, разместившись за столиками во втором зале. У нас также
                 есть две VIP-комнаты, где можно отметить важное событие в жизни или провести романтический вечер.
               </p>
-              <a href="interior.html" class="button button--orange" type="button">Посмотреть интерьер</a>
+              <a href="interior.html" class="button button--orange">Посмотреть интерьер</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="feedback container">
-      <button class="button button--slider button--slider-prev swiper-button-prev" type="button">
+    <section class="feedback container" id="feedback">
+      <button class="button button--nojs button--slider button--slider-prev swiper-button-prev" type="button">
         <span class="visually-hidden">Предыдущий слайд</span>
       </button>
-      <button class="button button--slider button--slider-next swiper-button-next" type="button">
+      <button class="button button--nojs button--slider button--slider-next swiper-button-next" type="button">
         <span class="visually-hidden">Следующий слайд</span>
       </button>
-      <div class="feedback__wrapper swiper">
+      <div class="feedback__wrapper feedback__wrapper--nojs swiper">
         <h2>Ваши отзывы</h2>
         <ul class="feedback__list swiper-wrapper">
           <li class="feedback__item swiper-slide">
@@ -278,7 +278,7 @@
         </ul>
       </div>
     </section>
-    <a href="#" class="button button--up" id="goTop">наверх</a>
+    <a class="button button--up" id="goTop">наверх</a>
   </main>
   <footer class="footer" id="contacts">
     <h2 class="visually-hidden">Как нас найти?</h2>
@@ -289,7 +289,7 @@
       </div>
       <ul class="footer__social-list">
         <li class="footer__social-item footer__social-item--inst">
-          <a href="#">
+          <a href="https://www.instagram.com/halal_food_163">
             <svg width="54" height="54" role="img">
               <use xlink:href="img/sprite.svg#icon-inst"></use>
             </svg>
@@ -303,7 +303,7 @@
           </a>
         </li>
         <li class="footer__social-item footer__social-item--marker" id="showMap">
-          <a href="#">
+          <a href="https://yandex.ru/maps/-/CCUBq2cagC">
             <svg width="40" height="58" role="img">
               <use xlink:href="img/sprite.svg#icon-marker"></use>
             </svg>
@@ -315,6 +315,7 @@
   </footer>
   <div class="overlay overlay--hidden"></div>
   <section class="map modal conatiner" id="modal-map">
+    <h2 class="visually-hidden">Наши координаты</h2>
     <div class="map__container">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2390.833308866343!2d50.10069331570318!3d53.1849699799456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41661f54eef22b2d%3A0xb16af47ad584abd!2sHALAL%20FOOD!5e0!3m2!1sru!2sru!4v1647334873613!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
     </div>

@@ -119,6 +119,17 @@
     margin: 0 auto;
     overflow: hidden;
   }
+
+  &--nojs {
+    overflow: auto;
+
+    .menu__item {
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
 }
 
 .menu__list {

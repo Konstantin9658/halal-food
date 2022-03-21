@@ -2,6 +2,7 @@ import { setOverlayVisible, setOverlayHide, overlay } from "./util.js";
 
 const btnMenu = document.querySelector('#btnMenu');
 const menu = document.querySelector('.header__nav-list');
+const menuItems = menu.querySelectorAll('.header__nav-item');
 
 function openCloseMenu() {
   if (!menu.classList.contains('header__nav-list--show')) {
@@ -19,5 +20,6 @@ function openCloseMenu() {
 
 export {
   btnMenu,
-  openCloseMenu
+  openCloseMenu,
+  menuItems
 }
