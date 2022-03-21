@@ -9,6 +9,7 @@
   height: auto;
   width: 100vw;
   background-color: $lime-green;
+  -webkit-blend-mode: multiply;
   background-blend-mode: multiply;
   background-image:  url("../img/body-bcg.jpg");
   background-position: 50% 50%;
