@@ -6,8 +6,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: auto;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background: linear-gradient(90deg, rgba(10, 20, 0, 0.9)), url("../img/body-bcg.jpg");
   background-position: 50% 50%;
 
@@ -41,7 +41,7 @@
     right: 8px;
 
     @media (min-width: 1440px) {
-      right: calc((100% - 1424px) / 2);
+      right: calc((100% - 1423px) / 2);
     }
 
     @media (max-width: $tablet-width) {
