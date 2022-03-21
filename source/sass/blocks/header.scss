@@ -59,7 +59,26 @@
   flex-grow: 1;
 
   @media (max-width: $tablet-width) {
-    display: none;
+    // display: none;
+    position: absolute;
+    z-index: -1;
+    top: -380px;
+
+    &--show {
+      transition: $trans--300;
+      display: flex;
+      flex-flow: column nowrap;
+      width: 100%;
+      height: auto;
+      overflow: auto;
+      position: fixed;
+      background: url("../img/bcg-menu-ornament.svg"), linear-gradient(129.41deg, #3C5A14 9.56%, #182804 88.31%);
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 50;
+    }
   }
 }
 
@@ -68,18 +87,38 @@
 
   &:not(:last-child) {
     margin-right: 35px;
+
+    @media (max-width: $tablet-width) {
+      margin-right: 0;
+    }
   }
 
   a {
     color: $main-white;
-  }
 
-  &:hover,
-  &:focus-visible {
-
-    a {
+    &:hover,
+    &:focus-visible {
       transition: $trans--300;
       color: $vivid-yellow;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+
+    a {
+      @include font($montserrat, 14px, 17px, 700, normal);
+      color: $color-txt;
+    }
+
+    &--active {
+
+      a {
+        color: $strong-orange;
+      }
     }
   }
 }
