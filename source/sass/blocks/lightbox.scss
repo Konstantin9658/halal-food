@@ -109,27 +109,22 @@ body.lb-disable-scrolling {
   -o-transition: opacity 0.6s;
   transition: opacity 0.6s;
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 68px;
-    height: 68px;
-    border: 1px solid $soft-yellow;
-    border-radius: 50%;
-    background-color: transparent;
-    top: 45%;
-  }
+  @media (min-width: $desktop-width) {
 
-  &::before {
-    top: 50%;
-  }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 68px;
+      height: 68px;
+      border: 1px solid $soft-yellow;
+      border-radius: 50%;
+      background-color: transparent;
+      top: 45%;
+    }
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
+    &::before {
+      top: 49%;
+    }
   }
 }
 
@@ -138,14 +133,17 @@ body.lb-disable-scrolling {
   left: 0;
   float: left;
 
-  &::after {
-    left: -100px;
-  }
+  @media (min-width: $desktop-width) {
 
-  &::before {
-    left: -74px;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent $soft-yellow transparent transparent;
+    &::after {
+      left: -100px;
+    }
+
+    &::before {
+      left: -74px;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent $soft-yellow transparent transparent;
+    }
   }
 }
 
@@ -154,14 +152,17 @@ body.lb-disable-scrolling {
   right: 0;
   float: right;
 
-  &::after {
-    right: -100px;
-  }
+  @media (min-width: $desktop-width) {
 
-  &::before {
-    right: -74px;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent $soft-yellow;
+    &::after {
+      right: -100px;
+    }
+
+    &::before {
+      right: -74px;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent $soft-yellow;
+    }
   }
 }
 
@@ -183,11 +184,6 @@ body.lb-disable-scrolling {
   display: table;
   clear: both;
 }
-
-// .lb-data {
-//   padding: 0 4px;
-//   color: #ccc;
-// }
 
 .lb-data .lb-details {
   display: none;
