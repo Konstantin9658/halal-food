@@ -1,4 +1,4 @@
-import { setOverlayHide, setOverlayVisible, isEscEvent, overlay } from './util.js';
+import { setOverlay, isEscEvent, overlay } from './util.js';
 import './util.js'
 
 const mapLink = document.querySelector('#showMap');
@@ -16,12 +16,12 @@ function escRemover() {
 
 function closeMap() {
   mapContainer.classList.toggle('modal--show');
-  setOverlayHide(overlay);
+  setOverlay('hide');
 }
 
 function showMap(evt) {
   evt.preventDefault();
-  setOverlayVisible(overlay);
+  setOverlay('show');
   mapContainer.classList.toggle('modal--show');
   escRemover();
 }

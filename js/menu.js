@@ -1,18 +1,18 @@
-import { setOverlayVisible, setOverlayHide, overlay } from "./util.js";
+import { setOverlay } from "./util.js";
 
 const btnMenu = document.querySelector('#btnMenu');
 const menu = document.querySelector('.header__nav-list');
-const menuItems = menu.querySelectorAll('.header__nav-item');
+const menuItems = Array.from(menu.querySelectorAll('.header__nav-item'));
 
-function openCloseMenu() {
-  if (!menu.classList.contains('header__nav-list--show')) {
+function openCloseMenu(target) {
+  if (target === btnMenu) {
     menu.classList.toggle('header__nav-list--show');
-    setOverlayVisible(overlay);
-    btnMenu.classList.remove('button--burger');
-    btnMenu.classList.add('button--closed');
-  } else {
-    menu.classList.toggle('header__nav-list--show');
-    setOverlayHide(overlay);
+    setOverlay('toggle');
+    btnMenu.classList.toggle('button--burger');
+    btnMenu.classList.toggle('button--closed');
+  } else if (menuItems.includes(target.parentNode)) {
+    menu.classList.remove('header__nav-list--show');
+    setOverlay('hide');
     btnMenu.classList.remove('button--closed');
     btnMenu.classList.add('button--burger');
   }

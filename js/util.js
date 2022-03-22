@@ -7,21 +7,30 @@ const feedbackBox = main.querySelector('.feedback__wrapper');
 
 const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
-function setOverlayVisible(overlay) {
-  body.style.overflow = 'hidden';
-  main.style.filter = 'blur(3px)';
-  overlay.classList.remove('overlay--hidden');
-}
-
-function setOverlayHide(overlay) {
-  body.style.overflow = '';
-  main.style.filter = '';
-  overlay.classList.add('overlay--hidden');
+function setOverlay(action) {
+  switch(action) {
+    case 'show':
+      body.style.overflow = 'hidden';
+      main.style.filter = 'blur(3px)';
+      overlay.classList.remove('overlay--hidden');
+      break;
+    case 'hide':
+      body.style.overflow = '';
+      main.style.filter = '';
+      overlay.classList.add('overlay--hidden');
+      break;
+    case 'toggle':
+      if (body.style.overflow == 'hidden') {
+        setOverlay('hide');
+      } else {
+        setOverlay('show');
+      }
+      break;
+  }
 }
 
 export {
-  setOverlayHide,
-  setOverlayVisible,
+  setOverlay,
   isEscEvent,
   overlay,
   menuBox,
