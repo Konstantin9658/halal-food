@@ -44,11 +44,6 @@ body.lb-disable-scrolling {
   width: 250px;
   height: 250px;
   margin: 0 auto;
-  // border-radius: 4px;
-
-  // /* Background color behind image.
-  //    This is visible during transitions. */
-  // background-color: white;
 }
 
 .lb-outerContainer:after {
@@ -113,13 +108,10 @@ body.lb-disable-scrolling {
 
     &::after {
       position: absolute;
-      content: "";
       width: 68px;
       height: 68px;
-      border: 1px solid $soft-yellow;
-      border-radius: 50%;
-      background-color: transparent;
       top: 45%;
+      opacity: 0.6;
     }
 
     &::before {
@@ -136,13 +128,8 @@ body.lb-disable-scrolling {
   @media (min-width: $desktop-width) {
 
     &::after {
+      content: url("../img/arrow-left.svg");
       left: -100px;
-    }
-
-    &::before {
-      left: -74px;
-      border-width: 10px 10px 10px 0;
-      border-color: transparent $soft-yellow transparent transparent;
     }
   }
 }
@@ -155,13 +142,8 @@ body.lb-disable-scrolling {
   @media (min-width: $desktop-width) {
 
     &::after {
+      content: url("../img/arrow-right.svg");
       right: -100px;
-    }
-
-    &::before {
-      right: -74px;
-      border-width: 10px 0 10px 10px;
-      border-color: transparent transparent transparent $soft-yellow;
     }
   }
 }

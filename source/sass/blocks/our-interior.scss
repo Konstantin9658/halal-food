@@ -46,7 +46,7 @@
   @include reset-list;
   display: grid;
   gap: 30px;
-  grid-template-rows: auto;
+  grid-template-rows: 1fr;
 
   @media (max-width: $tablet-width) {
     justify-content: center;
@@ -59,7 +59,6 @@
 
   @media (max-width: $tablet-width) {
     grid-template-columns: repeat(2, 361px);
-    grid-template-rows: auto;
   }
 
   @media (max-width: $mobile-width) {
@@ -72,12 +71,10 @@
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 231px 231px 233px;
-    grid-template-rows: 175px;
   }
 
   @media (max-width: $mobile-width) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
   }
 }
 
@@ -87,13 +84,10 @@
   img {
     width: 100%;
     object-fit: cover;
-  }
-}
 
-.our-interior__small-item {
-
-  img {
-    height: auto;
+    @media (max-width: $tablet-width) {
+      height: auto;
+    }
   }
 }
 
@@ -101,18 +95,8 @@
 
   @media (max-width: $tablet-width) {
 
-    img {
-      max-height: 256px;
-      height: auto;
-    }
-
     &--1 {
       grid-area: 2/1/4/-1;
-
-      img {
-        max-height: 525px;
-        height: auto;
-      }
     }
 
     &--text {

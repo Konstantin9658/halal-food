@@ -18,8 +18,8 @@ mapLink.addEventListener('click', showMap);
 btnCloseMap.addEventListener('click', closeMap);
 window.addEventListener('scroll', trackScroll);
 goTopBtn.addEventListener('click', backToTop);
-btnMenu.addEventListener('click', openCloseMenu);
+btnMenu.addEventListener('click', (evt) => openCloseMenu(evt.target));
 
 for (let menuItem of menuItems) {
-  menuItem.addEventListener('click', openCloseMenu);
+  menuItem.addEventListener('click', (evt) => openCloseMenu(evt.target));
 }

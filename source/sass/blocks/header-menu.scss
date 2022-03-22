@@ -1,7 +1,7 @@
 .header-menu {
   width: 100%;
   position: relative;
-  min-height: 229px;
+  min-height: 159px;
   overflow: hidden;
 
   @media (max-width: $mobile-width) {
@@ -53,26 +53,3 @@
     display: flex;
   }
 }
-
-// .header-menu__nav-list {
-//   @include reset-list;
-// }
-
-// .header-menu__nav-item {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   min-height: 50px;
-
-//   a {
-//     @include font($montserrat, 14px, 17px, 700, normal);
-//     color: $color-txt;
-//   }
-
-//   &--active {
-
-//     a {
-//       color: $strong-orange;
-//     }
-//   }
-// }
