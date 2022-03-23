@@ -23,39 +23,28 @@ const swiper = new Swiper('.swiper', {
   }
 });
 
-// const swiper2 = new Swiper('.swiper-2', {
-//   init: false,
-//   navigation: {
-//     nextEl: '.swiper-button-next-2',
-//     prevEl: '.swiper-button-prev-2',
-//   },
-//   breakpoints: {
-//     320: {
-//       slidesPerView: 1,
-//     }
-//   }
-// });
+const swiper2 = new Swiper('.swiper-2', {
+  init: false,
+  navigation: {
+    nextEl: '.swiper-button-next-2',
+    prevEl: '.swiper-button-prev-2',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    }
+  }
+});
 
 let mql = window.matchMedia('(max-width: 767px)');
 
-window.addEventListener('resize', checkViewport);
-window.addEventListener('load', checkViewport);
-
-function checkViewport() {
+const checkViewport = () => {
   if (mql.matches) {
-    var swiper2 = new Swiper('.swiper-2', {
-      navigation: {
-        nextEl: '.swiper-button-next-2',
-        prevEl: '.swiper-button-prev-2',
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-        }
-      }
-    });
+    swiper2.init();
   } else {
-    // swiper2.update();
-    swiper2.disable();
+    return
   }
 }
+
+window.addEventListener('resize', checkViewport);
+window.addEventListener('load', checkViewport);
