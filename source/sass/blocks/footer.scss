@@ -15,25 +15,45 @@
   }
 
   &::after {
-    content: url("../img/pepper-footer.png");
+
+    @supports not (content: url("../img/pepper-footer.webp")) {
+      content: url("../img/pepper-footer.png");
+    }
+
+    content: url("../img/pepper-footer.webp");
     bottom: 38px;
     left: calc((100% - 1207px) / 2);
 
     @media (max-width: $tablet-width) {
-      content: url("../img/pepper-footer-tab.png");
+
+      @supports not (content: url("../img/pepper-footer-tab.webp")) {
+        content: url("../img/pepper-footer-tab.png");
+      }
+
+      content: url("../img/pepper-footer-tab.webp");
       left: calc((100% - 744px) / 2);
       bottom: 132px;
     }
 
     @media (max-width: $mobile-width) {
-      content: url("../img/pepper-footer-mobile.png");
+
+      @supports not (content: url("../img/pepper-footer-mobile.webp")) {
+        content: url("../img/pepper-footer-mobile.png");
+      }
+
+      content: url("../img/pepper-footer-mobile.webp");
       left: calc((100% - 427px)/2);
       bottom: 89px;
     }
   }
 
   &::before {
-    content: url("../img/plate-footer.png");
+
+    @supports not (content: url("../img/plate-footer.webp")) {
+      content: url("../img/plate-footer.png");
+    }
+
+    content: url("../img/plate-footer.webp");
     bottom: 18px;
     right: 8px;
 
@@ -42,13 +62,23 @@
     }
 
     @media (max-width: $tablet-width) {
-      content: url("../img/plate-footer-tab.png");
+
+      @supports not (content: url("../img/plate-footer-tab.webp")) {
+        content: url("../img/plate-footer-tab.png");
+      }
+
+      content: url("../img/plate-footer-tab.webp");
       right: 9px;
       bottom: 142px;
     }
 
     @media (max-width: $mobile-width) {
-      content: url("../img/plate-footer-mobile.png");
+
+      @supports not (content: url("../img/plate-footer-mobile.webp")) {
+        content: url("../img/plate-footer-mobile.png");
+      }
+
+      content: url("../img/plate-footer-mobile.webp");
       right: 0px;
       bottom: 122px;
     }

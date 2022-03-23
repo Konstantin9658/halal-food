@@ -17,7 +17,12 @@
   }
 
   &::after {
-    content: url("../img/feedback/pepper-1.png");
+
+    @supports not (content: url("../img/feedback/pepper-1.webp")) {
+      content: url("../img/feedback/pepper-1.png");
+    }
+
+    content: url("../img/feedback/pepper-1.webp");
     bottom: 217px;
     left: 250px;
 
@@ -27,14 +32,24 @@
     }
 
     @media (max-width: $mobile-width) {
-      content: url("../img/feedback/pepper-1-mobile.png");
+
+      @supports not (content: url("../img/feedback/pepper-1-mobile.webp")) {
+        content: url("../img/feedback/pepper-1-mobile.png");
+      }
+
+      content: url("../img/feedback/pepper-1-mobile.webp");
       left: calc((100% - 360px) / 2);
       bottom: 150px;
     }
   }
 
   &::before {
-    content: url("../img/feedback/pepper-2.png");
+
+    @supports not (content: url("../img/feedback/pepper-2.webp")) {
+      content: url("../img/feedback/pepper-2.png");
+    }
+
+    content: url("../img/feedback/pepper-2.webp");
     right: 251px;
     top: 61px;
 
@@ -44,7 +59,12 @@
     }
 
     @media (max-width: $mobile-width) {
-      content: url("../img/feedback/pepper-2-mobile.png");
+
+      @supports not (content: url("../img/feedback/pepper-2-mobile.webp")) {
+        content: url("../img/feedback/pepper-2-mobile.png");
+      }
+
+      content: url("../img/feedback/pepper-2-mobile.webp");
       left: calc((100% + 157px) / 2);
       top: 44px;
     }

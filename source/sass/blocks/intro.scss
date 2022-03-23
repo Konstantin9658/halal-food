@@ -34,7 +34,12 @@
   }
 
   &::before {
-    content: url("../img/barbecue.png");
+
+    @supports not (content: url("../img/barbecue.webp")) {
+      content: url("../img/barbecue.png");
+    }
+
+    content: url("../img/barbecue.webp");
     width: 708px;
     height: 671px;
     position: absolute;
@@ -42,7 +47,12 @@
     right: -51px;
 
     @media (max-width: $tablet-width) {
-      content: url("../img/barbecue-tab.png");
+
+      @supports not (content: url("../img/barbecue-tab.webp")) {
+        content: url("../img/barbecue-tab.png");
+      }
+
+      content: url("../img/barbecue-tab.webp");
       width: 542px;
       height: 514px;
       top: -123px;
@@ -50,7 +60,11 @@
     }
 
     @media (max-width: $mobile-width) {
-      content: url("../img/barbecue-mobile.png");
+      @supports not (content: url("../img/barbecue-mobile.webp")) {
+        content: url("../img/barbecue-mobile.png");
+      }
+
+      content: url("../img/barbecue-mobile.webp");
       width: 229px;
       height: 208px;
       top: 54px;

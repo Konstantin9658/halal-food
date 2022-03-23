@@ -29,8 +29,13 @@
   }
 
   &::before {
+
+    @supports not (content: url("../img/menu/vegetables-menu-page.webp")) {
+      content: url("../img/menu/vegetables-menu-page.png");
+    }
+
+    content: url("../img/menu/vegetables-menu-page.webp");
     position: absolute;
-    content: url("../img/menu/vegetables-menu-page.png");
     left: 50%;
     transform: translateX(-49%);
 
@@ -39,7 +44,12 @@
     }
 
     @media (max-width: $mobile-width) {
-      content: url("../img/menu/vegetables-menu-page-mobile.png");
+
+      @supports not (content: url("../img/menu/vegetables-menu-page-mobile.webp")) {
+        content: url("../img/menu/vegetables-menu-page-mobile.png");
+      }
+
+      content: url("../img/menu/vegetables-menu-page.webp");
       top: 21px;
       transform: translateX(-51%);
     }

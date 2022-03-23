@@ -16,7 +16,12 @@
     content: "";
     width: 1125px;
     height: 517px;
-    background-image: url("../img/vegetables.png");
+
+    @supports not (background-image: url("../img/vegetables.webp")) {
+      background-image: url("../img/vegetables.png")
+    }
+
+    background-image: url("../img/vegetables.webp");
     background-repeat: no-repeat;
     background-size: cover;
     left: calc((100% - 1129px) / 2);
